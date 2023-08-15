@@ -11,12 +11,22 @@
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
+
+    @media(max-width: $bp-medium) {
+      grid-column: 1 / -1;
+      padding: 6rem;
+    }
   }
 
   &__img--1 {
     width: 100%;
     grid-area: 2 / 2 / span 4 / span 4;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, .1);
+
+    @media(max-width: $bp-medium) {
+      grid-column: 1 / 5;
+      grid-row: 1 / -1;
+    }
   }
 
   &__img--2 {
@@ -24,6 +34,10 @@
     width: 115%;
     grid-area: 4 / 4 / span 2 / span 3;
     z-index: 20;
+    @media(max-width: $bp-medium) {
+      width: 100%;
+      grid-row: 1 / -1;
+    }
   }
 
   &__content {
@@ -33,6 +47,11 @@
     align-content: center;
     justify-items: start;
     padding: 6rem 8vw;
+
+    @media(max-width: $bp-medium) {
+      grid-column: 1 / -1;
+      grid-row: 5 / 6;
+    }
   }
 
   &__text {
